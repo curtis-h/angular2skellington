@@ -9,8 +9,5 @@
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
     "outDir": "./build/"
-  },
-  "include": [
-    "./app/*.ts"
-  ]
+  }
 }
