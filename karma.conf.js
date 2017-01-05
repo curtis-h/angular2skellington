@@ -28,6 +28,7 @@ module.exports = function(config) {
 
       { pattern: 'node_modules/@angular/**/*.js', included: false, watched: false },
 
+      './karma.shim.js',
       './tests/*.js'
     ],
 
@@ -40,6 +41,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      './karma.shim.js': ['browserify'],
       './tests/*.js': ['browserify']
     },
 

@@ -5,7 +5,9 @@
   "scripts": {
     "server": "npm run build && npm start",
     "build": "npm run tsc && browserify ./build/main.js -o ./public/app.js",
-    "test": "npm run tsc:test && npm run karma start && rm -vf ./app/*.js",
+    "test": "npm run tsc:test && npm run karma start",
+    "test:rm": "npm run test && npm run cleanup",
+    "cleanup": "rm -vf ./app/*.js && rm -vf ./tests/*.js",
     "tsc": "tsc",
     "tsc:test": "tsc -p tests/ --experimentalDecorators",
     "karma": "karma"
